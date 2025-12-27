@@ -1,1 +1,307 @@
-# takasaki
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8">
+  <title>セントラルホテルグループQ&Aチャット</title>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* ===== 共通 ===== */
+#chatbox {
+  width: 360px;
+  max-width: 95vw;
+  height: 520px;
+  max-height: 75dvh;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+#chatHeader {
+  background: #CC2E2E;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+}
+
+#chatHeader .backBtn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #fafafa;
+}
+
+.msg {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.user { background: #d1f0d1; align-self: flex-end; }
+.bot  { background: #f0f0f0; align-self: flex-start; }
+
+#inputArea {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 6px;
+  gap: 6px;
+}
+
+#userInput {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* ===== ボタンサイズ完全固定 ===== */
+#micBtn,
+#sendBtn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: #0078d7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ===== 録音中：色のみ変更 ===== */
+#micBtn.recording {
+  background: #0078d7;
+  color: #ff5252;
+  position: relative;
+}
+
+/* ===== 赤丸 外側パルス（タップ非干渉） ===== */
+#micBtn.recording::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255,82,82,0.6);
+  animation: micPulse 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes micPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,82,82,0.6); }
+  70%  { box-shadow: 0 0 0 10px rgba(255,82,82,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,82,82,0); }
+}
+
+/* ===== スマホ中央固定 ===== */
+@media screen and (max-width: 600px) {
+  #chatbox {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="chatbox">
+  <div id="chatHeader">
+    <span class="backBtn" title="公式サイトへ戻る">←</span>
+    <div>
+      矢印クリックで公式サイトへ..<br>
+      セントラルホテル高崎Q&Aチャット<br>
+      質問は直接入力、スマホ音声入力対応
+    </div>
+  </div>
+
+  <div id="messages"></div>
+
+  <div id="inputArea">
+    <input id="userInput" placeholder="ご質問をどうぞ…">
+    <button id="micBtn">🎤</button>
+    <button id="sendBtn">送信</button>
+  </div>
+</div>
+
+<script>
+/* ===== 戻る ===== */
+document.querySelector(".backBtn").onclick = ()=>{
+  window.location.href = "https://centralhoteltakasaki.com/";
+};
+
+  
+/* ===== FAQ（例：ここに全文入れてOK） ===== */
+const faq=[
+ {
+keywords:["チェックイン","ちぇっくいん","チェックイン時間"],
+answer:`チェックイン時間は宿泊当日15:00〜です。早めのチェックインをご希望の際は有償によるご対応が可能です。フロントスタッフまたは、事前に 0297-72-1123 までお問合わせください。お待ちいただく際にはウエルカムドリンクコーナーもございますのでご利用ください。`
+},
+
+{
+keywords:["チェックアウト","ちぇっくあうと","チェックアウト時間","オーバーチャージ","遅め","遅く","レイト","超過","延長"],
+answer:`チェックアウト時間は翌朝10:00です。（プランにより異なる場合がございます）有償によるご対応も可能です。フロントスタッフまたは、事前に 0297-72-1123 までお問合わせください。`
+}
+  
+];
+
+/* ===== QAロジック ===== */
+function findAnswer(query){
+  query = query.toLowerCase();
+  for(const item of faq){
+    for(const kw of item.keywords){
+      if(query.includes(kw)) return item.answer;
+    }
+  }
+  return "申し訳ありません。その質問にはまだ対応していません。027-321-7000までお問い合わせください。";
+}
+
+/* ===== DOM ===== */
+const messages = document.getElementById("messages");
+const userInput = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
+const micBtn = document.getElementById("micBtn");
+
+/* ===== タイプライター表示（bot専用） ===== */
+function addBotMessageTypewriter(text){
+  const div = document.createElement("div");
+  div.className = "msg bot";
+  messages.appendChild(div);
+  let i = 0;
+  const timer = setInterval(()=>{
+    div.textContent += text.charAt(i);
+    i++;
+    messages.scrollTop = messages.scrollHeight;
+    if(i >= text.length) clearInterval(timer);
+  }, 25);
+}
+
+/* ===== メッセージ表示 ===== */
+function addMessage(msg,isUser=false){
+  if(isUser){
+    const div=document.createElement("div");
+    div.className="msg user";
+    div.textContent=msg;
+    messages.appendChild(div);
+    messages.scrollTop=messages.scrollHeight;
+  }else{
+    addBotMessageTypewriter(msg);
+  }
+}
+
+/* ===== 送信 ===== */
+sendBtn.onclick=()=>{
+  const msg=userInput.value.trim();
+  if(!msg)return;
+  addMessage(msg,true);
+  setTimeout(()=>addMessage(findAnswer(msg)),100);
+  userInput.value="";
+};
+
+/* ===== Enterキー送信（PC） ===== */
+userInput.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    sendBtn.click();
+  }
+});
+
+/* ===== プレースホルダー回転 ===== */
+const placeholders=[
+  "ご質問を入力ください",
+  "音声入力はマイクをPush！",
+  "チェックイン時の不明点や、",
+  "駐車場、食事などお尋ねください",
+  "お電話なら027-321-7000まで.."
+];
+let phIndex=0;
+setInterval(()=>{
+  userInput.placeholder=placeholders[phIndex];
+  phIndex=(phIndex+1)%placeholders.length;
+},3000);
+
+/* ===== 音声入力 ===== */
+let recognition=null;
+
+if(window.SpeechRecognition||window.webkitSpeechRecognition){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  recognition=new SR();
+  recognition.lang="ja-JP";
+
+  recognition.onstart=()=>{
+    micBtn.classList.add("recording");
+    micBtn.textContent="●";
+  };
+
+  recognition.onend=()=>{
+    micBtn.classList.remove("recording");
+    micBtn.textContent="🎤";
+  };
+
+  recognition.onerror=()=>{
+    micBtn.classList.remove("recording");
+    micBtn.textContent="🎤";
+  };
+
+  recognition.onresult=e=>{
+    userInput.value=e.results[0][0].transcript;
+    sendBtn.click();
+  };
+}
+
+micBtn.onclick=()=>{
+  if(recognition){
+    recognition.start();
+  }else{
+    alert("このブラウザでは音声入力に対応していません。");
+  }
+};
+
+/* ===== 無操作3分でホームへ ===== */
+const AUTO_CLOSE_TIME=180000;
+let autoTimer=null;
+
+function resetTimer(){
+  clearTimeout(autoTimer);
+  autoTimer=setTimeout(()=>{
+    window.location.href="https://centralhoteltakasaki.com/";
+  },AUTO_CLOSE_TIME);
+}
+
+["click","keydown","touchstart","mousemove","scroll"].forEach(e=>{
+  document.addEventListener(e,resetTimer,{passive:true});
+});
+resetTimer();
+</script>
+
+</body>
+</html>
