@@ -141,7 +141,7 @@ html, body {
   padding: 0;
   border: none;
   border-radius: 8px;
-  background: #2e7d32;
+  background: #ff8c00;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -232,7 +232,7 @@ html, body {
 
 <script>
 
-
+/* ===== 右クリック・コピー防止 ===== */
 document.addEventListener("contextmenu", function(e){
   e.preventDefault();
 });
@@ -250,13 +250,13 @@ document.addEventListener("keydown", function(e){
   }
 });
 
-
+/* スマホ長押し対策 */
 document.addEventListener("touchstart", function(e){
   if(e.touches.length > 1){
     e.preventDefault();
   }
 }, {passive:false});
-
+/* ===== ここまで ===== */
 
 
 document.querySelector(".backBtn").onclick = () => {
