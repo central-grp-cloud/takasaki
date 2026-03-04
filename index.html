@@ -105,11 +105,14 @@
     }
     #userInput {
       flex: 1;
-      height: 44px;              
-      padding: 0 12px;           
+      height: 44px;
+      padding: 0 12px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 16px;           
+      font-size: 16px;
+    }
+    #userInput:focus {
+      outline: none;  
     }
     #micBtn,
     #sendBtn {
@@ -205,8 +208,15 @@ document.addEventListener("keydown", function(e){
     e.preventDefault();
   }
 });
+
+window.addEventListener('load', function() {
+  if (history && history.replaceState) {
+    history.replaceState(null, '', '/セントラルホテルグループQAチャット');
+  }
+});
+
 document.querySelector(".backBtn").onclick = () => {
-  window.location.href = "https://www.centralhoteltakasaki.com/";
+  window.location.href = "https://centralhoteltakasaki.com/";
 };
 const faq = {
   ja: [
@@ -692,7 +702,7 @@ i18next
     document.querySelectorAll('[data-i18n]').forEach(el => {
       el.innerHTML = t(el.dataset.i18n);
     });
-    document.title = t('siteHeader') + ' Q&A Chat';
+    document.title = 'セントラルホテルグループ Q&A チャット';
     placeholders = t('placeholders', { returnObjects: true });
     let phIndex = 0;
     setInterval(() => {
