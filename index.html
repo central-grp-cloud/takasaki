@@ -347,74 +347,418 @@ const faq = {
   {keywords:["オンライン","事前"], answer:"オンライン事前チェックインは対応しておりません。"}
   ],
   en: [
-    {
-"keywords": ["check-in", "checkin", "time", "what time"],
-"answer": "Check-in starts at 3:00 PM. Early check-in is available on a chargeable basis depending on room availability. Please come to the front desk on the 2nd floor."
-},
-{
-"keywords": ["check-out", "checkout", "out"],
-"answer": "Check-out is requested by 10:00 AM. Extension of stay is possible on a chargeable basis depending on room availability. Please inform the front desk on the 2nd floor."
-}
+   {keywords:["check-in","checkin"], answer:"Check-in begins at 3:00 PM."},
+
+  {keywords:["check-out","overcharge","extension"], answer:"Check-out time is 10:00 AM. If you wish to extend your stay, please contact the Front Desk in advance by pressing the 'A' button. Additional charges may apply."},
+
+  {keywords:["breakfast"], answer:"Breakfast is served from 6:30 AM to 9:00 AM. Please visit the restaurant on the 1st floor."},
+
+  {keywords:["wake-up call"], answer:"To set a wake-up call, please lift the receiver, press the 'B' button, and enter a four-digit time. (Example: For 8:15 AM, please enter 0815.)"},
+
+  {keywords:["valuables"], answer:"We recommend depositing your valuables in the safe at the Front Desk and receiving a receipt. Please note that the hotel cannot be held responsible for valuables not deposited with the Front Desk."},
+
+  {keywords:["air conditioning","air conditioner","cooling","heating"], answer:"The air conditioning can be adjusted using the control switch located beside your bed."},
+
+  {keywords:["front desk","call front"], answer:"For assistance, please press the 'A' button to contact the Front Desk."},
+
+  {keywords:["room key"], answer:"When leaving your room, please ensure the door is securely locked. We kindly ask that you leave your room key at the Front Desk when going out."},
+
+  {keywords:["evacuation route","evacuation","fire"], answer:"An evacuation route map is posted on the inside of your room door. Please review it for your safety."},
+
+  {keywords:["ventilation","unit bath","bathroom"], answer:"The bathroom ventilation fan operates 24 hours a day to ensure proper air circulation."},
+
+  {keywords:["laundry","washing"], answer:"Please report any loss, damage, or dissatisfaction with laundry service within 24 hours after delivery. In the case of compensation, liability will be limited to a maximum of ten times the laundry fee. Laundry service requests are accepted at the Front Desk on the 2nd floor. For inquiries, please press 'A' to contact the Front Desk. *Please note that laundry service is unavailable on Sundays and public holidays."},
+
+  {keywords:["room","cleaning","housekeeping"], answer:"Housekeeping requests are accepted from 10:00 AM to 1:00 PM. If you do not require cleaning or would like to change the cleaning time, please contact the Front Desk by pressing 'A'. Remaining beverages and items in the trash bin will be disposed of. (If there are items that should not be discarded, please leave a note for our staff.)"},
+
+  {keywords:["tea","hot water"], answer:"Please use the tea server or electric kettle provided in your room."},
+
+  {keywords:["hair dryer","hairdryer"], answer:"A hair dryer is available in the closet."},
+
+  {keywords:["refrigerator"], answer:"The refrigerator is located under the desk. (Please note that it does not have a freezer function.)"},
+
+  {keywords:["vending machine"], answer:"Vending machines are located on the 5th and 9th floors."},
+
+  {keywords:["coin","coinlaundry"], answer:"A coin-operated laundry is available next to the vending machines on the 9th floor."},
+
+  {keywords:["microwave"], answer:"A microwave oven is available next to the vending machines on the 9th floor."},
+
+  {keywords:["ice machine","ice"], answer:"An ice machine is available next to the vending machines on the 5th floor."},
+
+  {keywords:["pants press"], answer:"Pants pressers are available next to the elevators on each floor. They are also available for loan at the Front Desk."},
+
+  {keywords:["wifi","wi-fi","lan","internet","wired internet"], answer:"Complimentary Wi-Fi is available in all guest rooms. Wired LAN internet access is available in the lobby on the 2nd floor."},
+
+  {keywords:["newspaper"], answer:"Newspapers are available for reading and purchase in the lobby on the 2nd floor."},
+
+  {keywords:["massage","transportation information","timetable"], answer:"For massage arrangements, transportation information, or train timetables, please contact the Front Desk by pressing 'A'."},
+
+  {keywords:["copy","fax"], answer:"Copy and fax services are available at the Front Desk on the 2nd floor for an additional charge. Please ask the staff for assistance."},
+
+  {keywords:["rental"], answer:"The following items are available for loan: desk lamps, mobile phone chargers, irons, ironing boards, hangers, blankets, wired LAN cables, sewing kits, pants pressers, nail clippers, thermometers, bottle openers, wine openers, forks, spoons, plates, and humidifiers."},
+
+  {keywords:["amenities"], answer:"Additional amenities available include combs, razors, hair brushes, cotton swabs, soap, body sponges, basic skincare products, disposable chopsticks, bath additives, train timetables from Takasaki Station, and a nearby restaurant map."},
+
+  {keywords:["room service"], answer:"Room service is not available."},
+
+  {keywords:["nightwear","slippers"], answer:"We kindly ask guests not to wear nightwear or slippers in the lobby or restaurant."},
+
+  {keywords:["telephone","outside line","extension"], answer:"The telephone provides direct dialing for local, domestic, and international calls. To call another guest room, please dial the room number (example: dial 701 for Room 701). For local or domestic calls, press the 'D' button, wait for the dial tone, and then dial the number. For international calls, press 'D', then dial 010 followed by the country code, area code, and phone number."}
   ],
   zh: [
-    {
-    "keywords": ["入住", "登记", "时间", "几点", "入住时间"],
-    "answer": "入住时间从下午3:00开始。根据房况，可提供付费提前入住服务。请到2楼前台办理。"
-  },
-  {
-    "keywords": ["退房", "离开", "退房时间"],
-    "answer": "退房时间为上午10:00之前。根据房况，可提供付费延迟退房服务。请提前告知2楼前台。"
-  }
+    {keywords:["入住","check-in"], answer:"入住时间为下午3:00开始。"},
+
+  {keywords:["退房","超时","延长"], answer:"退房时间为上午10:00。如需延长退房时间，请提前按“A”键联系前台咨询，可能会产生额外费用。"},
+
+  {keywords:["早餐"], answer:"早餐时间为上午6:30至9:00。请前往1楼餐厅用餐。"},
+
+  {keywords:["叫醒服务","morning call"], answer:"请拿起电话听筒，按下“B”键后输入4位数字时间。（例如：需要8:15叫醒，请输入0815。）"},
+
+  {keywords:["贵重物品"], answer:"贵重物品请寄存在前台保险箱，并领取寄存凭证。未寄存在前台的贵重物品，如发生遗失或损坏，酒店概不负责，敬请谅解。"},
+
+  {keywords:["空调","冷气","暖气"], answer:"空调可通过床头的控制开关进行调节。"},
+
+  {keywords:["前台","联系前台"], answer:"如需联系前台，请按“A”键。"},
+
+  {keywords:["房卡","钥匙"], answer:"外出时请确认房门已上锁，并请将房间钥匙寄存在前台。"},
+
+  {keywords:["避难","逃生","火灾"], answer:"房门内侧贴有紧急疏散路线图。为了您的安全，请务必提前确认。"},
+
+  {keywords:["通风","浴室","unit bath"], answer:"浴室内的排风扇24小时运行，以保持空气流通。"},
+
+  {keywords:["洗衣","洗衣服务","laundry"], answer:"如对洗衣服务有遗失、损坏或其他不满意之处，请在送回后24小时内联系前台。若需赔偿，最高赔偿金额为洗衣费用的10倍。洗衣服务在2楼前台受理。如需咨询，请按“A”键联系前台。※周日及节假日暂停服务。"},
+
+  {keywords:["房间清扫","清洁","打扫"], answer:"客房清扫申请时间为上午10:00至下午1:00。如无需清扫或需要更改时间，请按“A”键联系前台。未饮完的饮料以及垃圾桶内的垃圾将被处理。（如有不能丢弃的物品，请留言说明。）"},
+
+  {keywords:["茶","热水"], answer:"请使用客房内提供的茶具或电热水壶。"},
+
+  {keywords:["吹风机","吹风筒"], answer:"吹风机放置在衣柜内。"},
+
+  {keywords:["冰箱"], answer:"冰箱位于书桌下方。（不具备冷冻功能。）"},
+
+  {keywords:["自动售货机"], answer:"馆内5楼和9楼设有自动售货机。"},
+
+  {keywords:["投币洗衣机","自助洗衣"], answer:"9楼自动售货机区域旁设有投币式洗衣机。"},
+
+  {keywords:["微波炉"], answer:"9楼自动售货机区域旁设有微波炉。"},
+
+  {keywords:["制冰机","冰块"], answer:"5楼自动售货机区域旁设有制冰机。"},
+
+  {keywords:["裤子熨烫机","熨裤机"], answer:"各楼层电梯旁设有裤子熨烫机。（前台也提供借用。）"},
+
+  {keywords:["wifi","无线网络","互联网","LAN"], answer:"所有客房均提供免费Wi-Fi。若需要有线网络，请在2楼大厅使用。"},
+
+  {keywords:["报纸"], answer:"2楼大厅提供报纸阅览及购买。"},
+
+  {keywords:["按摩","交通信息","时刻表"], answer:"如需按摩服务、交通信息或列车时刻表，请按“A”键联系前台。"},
+
+  {keywords:["复印","传真"], answer:"复印及传真服务可在2楼前台付费使用。如需使用，请咨询前台工作人员。"},
+
+  {keywords:["借用","租借"], answer:"酒店可借用物品包括：台灯、手机充电器、熨斗、熨衣板、衣架、毛毯、有线LAN网线、针线包、裤子熨烫机、指甲剪、体温计、开瓶器、红酒开瓶器、叉子、勺子、餐盘及加湿器。"},
+
+  {keywords:["洗漱用品","用品","amenities"], answer:"前台提供以下用品：梳子、剃须刀、发刷、棉签、香皂、沐浴海绵、基础护肤品、一次性筷子、入浴剂、高崎站出发的列车时刻表及附近餐厅地图。"},
+
+  {keywords:["客房服务","room service"], answer:"本酒店不提供客房送餐服务。"},
+
+  {keywords:["睡衣","拖鞋"], answer:"请勿穿着睡衣或拖鞋前往大厅或餐厅，感谢您的配合。"},
+
+  {keywords:["电话","外线","内线"], answer:"客房电话可直接拨打市内、市外及国际电话。若拨打其他客房，请直接输入房号（例如：701房间请输入701）。拨打市内或长途电话时，请先按“D”键确认拨号音后再输入电话号码。拨打国际电话时，请按“D”键后依次输入010＋国家代码＋地区代码＋电话号码。"}
   ],
   'zh-CN': [
-    {
-    "keywords": ["入住", "登记", "时间", "几点", "入住时间"],
-    "answer": "入住时间从下午3:00开始。根据房况，可提供付费提前入住服务。请到2楼前台办理。"
-  },
-  {
-    "keywords": ["退房", "离开", "退房时间"],
-    "answer": "退房时间为上午10:00之前。根据房况，可提供付费延迟退房服务。请提前告知2楼前台。"
-  }
+    {keywords:["入住","check-in"], answer:"入住时间为下午3:00开始。"},
+
+  {keywords:["退房","超时","延长"], answer:"退房时间为上午10:00。如需延长退房时间，请提前按“A”键联系前台咨询，可能会产生额外费用。"},
+
+  {keywords:["早餐"], answer:"早餐时间为上午6:30至9:00。请前往1楼餐厅用餐。"},
+
+  {keywords:["叫醒服务","morning call"], answer:"请拿起电话听筒，按下“B”键后输入4位数字时间。（例如：需要8:15叫醒，请输入0815。）"},
+
+  {keywords:["贵重物品"], answer:"贵重物品请寄存在前台保险箱，并领取寄存凭证。未寄存在前台的贵重物品，如发生遗失或损坏，酒店概不负责，敬请谅解。"},
+
+  {keywords:["空调","冷气","暖气"], answer:"空调可通过床头的控制开关进行调节。"},
+
+  {keywords:["前台","联系前台"], answer:"如需联系前台，请按“A”键。"},
+
+  {keywords:["房卡","钥匙"], answer:"外出时请确认房门已上锁，并请将房间钥匙寄存在前台。"},
+
+  {keywords:["避难","逃生","火灾"], answer:"房门内侧贴有紧急疏散路线图。为了您的安全，请务必提前确认。"},
+
+  {keywords:["通风","浴室","unit bath"], answer:"浴室内的排风扇24小时运行，以保持空气流通。"},
+
+  {keywords:["洗衣","洗衣服务","laundry"], answer:"如对洗衣服务有遗失、损坏或其他不满意之处，请在送回后24小时内联系前台。若需赔偿，最高赔偿金额为洗衣费用的10倍。洗衣服务在2楼前台受理。如需咨询，请按“A”键联系前台。※周日及节假日暂停服务。"},
+
+  {keywords:["房间清扫","清洁","打扫"], answer:"客房清扫申请时间为上午10:00至下午1:00。如无需清扫或需要更改时间，请按“A”键联系前台。未饮完的饮料以及垃圾桶内的垃圾将被处理。（如有不能丢弃的物品，请留言说明。）"},
+
+  {keywords:["茶","热水"], answer:"请使用客房内提供的茶具或电热水壶。"},
+
+  {keywords:["吹风机","吹风筒"], answer:"吹风机放置在衣柜内。"},
+
+  {keywords:["冰箱"], answer:"冰箱位于书桌下方。（不具备冷冻功能。）"},
+
+  {keywords:["自动售货机"], answer:"馆内5楼和9楼设有自动售货机。"},
+
+  {keywords:["投币洗衣机","自助洗衣"], answer:"9楼自动售货机区域旁设有投币式洗衣机。"},
+
+  {keywords:["微波炉"], answer:"9楼自动售货机区域旁设有微波炉。"},
+
+  {keywords:["制冰机","冰块"], answer:"5楼自动售货机区域旁设有制冰机。"},
+
+  {keywords:["裤子熨烫机","熨裤机"], answer:"各楼层电梯旁设有裤子熨烫机。（前台也提供借用。）"},
+
+  {keywords:["wifi","无线网络","互联网","LAN"], answer:"所有客房均提供免费Wi-Fi。若需要有线网络，请在2楼大厅使用。"},
+
+  {keywords:["报纸"], answer:"2楼大厅提供报纸阅览及购买。"},
+
+  {keywords:["按摩","交通信息","时刻表"], answer:"如需按摩服务、交通信息或列车时刻表，请按“A”键联系前台。"},
+
+  {keywords:["复印","传真"], answer:"复印及传真服务可在2楼前台付费使用。如需使用，请咨询前台工作人员。"},
+
+  {keywords:["借用","租借"], answer:"酒店可借用物品包括：台灯、手机充电器、熨斗、熨衣板、衣架、毛毯、有线LAN网线、针线包、裤子熨烫机、指甲剪、体温计、开瓶器、红酒开瓶器、叉子、勺子、餐盘及加湿器。"},
+
+  {keywords:["洗漱用品","用品","amenities"], answer:"前台提供以下用品：梳子、剃须刀、发刷、棉签、香皂、沐浴海绵、基础护肤品、一次性筷子、入浴剂、高崎站出发的列车时刻表及附近餐厅地图。"},
+
+  {keywords:["客房服务","room service"], answer:"本酒店不提供客房送餐服务。"},
+
+  {keywords:["睡衣","拖鞋"], answer:"请勿穿着睡衣或拖鞋前往大厅或餐厅，感谢您的配合。"},
+
+  {keywords:["电话","外线","内线"], answer:"客房电话可直接拨打市内、市外及国际电话。若拨打其他客房，请直接输入房号（例如：701房间请输入701）。拨打市内或长途电话时，请先按“D”键确认拨号音后再输入电话号码。拨打国际电话时，请按“D”键后依次输入010＋国家代码＋地区代码＋电话号码。"}
   ],
   'zh-TW': [
-    {
-    "keywords": ["入住", "登記", "時間", "幾點", "入住時間"],
-    "answer": "入住時間從下午3:00開始。視房況可提供付費提前入住服務，請至2樓櫃台辦理。"
-  },
-  {
-    "keywords": ["退房", "離開", "退房時間"],
-    "answer": "退房時間為上午10:00之前。視房況可提供付費延遲退房服務，請提前告知2樓櫃台。"
-  }
+    {keywords:["入住","check-in"], answer:"入住時間為下午3:00開始。"},
+
+  {keywords:["退房","延長","超時"], answer:"退房時間為上午10:00。如需延長退房時間，請事先按「A」鍵聯絡櫃檯詢問，可能需支付額外費用。"},
+
+  {keywords:["早餐"], answer:"早餐供應時間為上午6:30至9:00。請至1樓餐廳用餐。"},
+
+  {keywords:["晨喚","叫醒服務","morning call"], answer:"請拿起電話聽筒，按下「B」鍵後輸入4位數時間。（例如：若需8:15叫醒，請輸入0815。）"},
+
+  {keywords:["貴重物品"], answer:"貴重物品請寄放於櫃檯保險箱並領取寄存憑證。未寄放於櫃檯的貴重物品，如有遺失或損壞，飯店恕不負責，敬請見諒。"},
+
+  {keywords:["空調","冷氣","暖氣"], answer:"空調可透過床頭旁的控制開關進行調整。"},
+
+  {keywords:["櫃檯","前台"], answer:"如需聯絡櫃檯，請按「A」鍵。"},
+
+  {keywords:["房卡","鑰匙"], answer:"外出時請確認房門已上鎖，並請將房間鑰匙寄放於櫃檯。"},
+
+  {keywords:["避難","逃生","火災"], answer:"房門內側張貼有緊急逃生路線圖。為了您的安全，請務必事先確認。"},
+
+  {keywords:["通風","浴室"], answer:"浴室內的排風扇為24小時運轉，以保持空氣流通。"},
+
+  {keywords:["洗衣","洗衣服務","laundry"], answer:"若對洗衣服務有遺失、損壞或任何不滿意之處，請於送回後24小時內通知櫃檯。若需賠償，最高金額為洗衣費用的10倍。洗衣服務於2樓櫃檯受理。如需詢問，請按「A」鍵聯絡櫃檯。※週日及國定假日暫停服務。"},
+
+  {keywords:["客房清潔","打掃","清掃"], answer:"客房清潔申請時間為上午10:00至下午1:00。如不需要清潔或需更改時間，請按「A」鍵聯絡櫃檯。未喝完的飲料及垃圾桶內的垃圾將會清理。（如有不可丟棄的物品，請留下備註說明。）"},
+
+  {keywords:["茶","熱水"], answer:"請使用客房內提供的茶具或電熱水壺。"},
+
+  {keywords:["吹風機"], answer:"吹風機放置於衣櫃內。"},
+
+  {keywords:["冰箱"], answer:"冰箱位於書桌下方。（無冷凍功能。）"},
+
+  {keywords:["自動販賣機"], answer:"館內5樓與9樓設有自動販賣機。"},
+
+  {keywords:["投幣洗衣機","自助洗衣"], answer:"9樓自動販賣機區旁設有投幣式洗衣設備。"},
+
+  {keywords:["微波爐"], answer:"9樓自動販賣機區旁設有微波爐。"},
+
+  {keywords:["製冰機","冰塊"], answer:"5樓自動販賣機區旁設有製冰機。"},
+
+  {keywords:["熨褲機","褲子熨燙機"], answer:"各樓層電梯旁設有熨褲機。（櫃檯亦提供借用。）"},
+
+  {keywords:["wifi","無線網路","網路","internet"], answer:"所有客房均提供免費Wi-Fi。如需有線網路，請至2樓大廳使用。"},
+
+  {keywords:["報紙"], answer:"2樓大廳提供報紙閱覽與購買。"},
+
+  {keywords:["按摩","交通資訊","時刻表"], answer:"如需按摩服務、交通資訊或列車時刻表，請按「A」鍵聯絡櫃檯。"},
+
+  {keywords:["影印","傳真"], answer:"影印與傳真服務可於2樓櫃檯付費使用。如需使用，請洽詢櫃檯人員。"},
+
+  {keywords:["借用","租借"], answer:"可借用物品包括：檯燈、手機充電器、熨斗、燙衣板、衣架、毛毯、有線LAN網路線、針線包、熨褲機、指甲剪、體溫計、開瓶器、紅酒開瓶器、叉子、湯匙、餐盤及加濕器。"},
+
+  {keywords:["盥洗用品","備品","amenities"], answer:"櫃檯提供以下備品：梳子、刮鬍刀、髮刷、棉花棒、香皂、沐浴海綿、基礎保養品、免洗筷、入浴劑、高崎站出發列車時刻表以及附近餐廳地圖。"},
+
+  {keywords:["客房服務","room service"], answer:"本飯店未提供客房送餐服務。"},
+
+  {keywords:["睡衣","拖鞋"], answer:"請勿穿著睡衣或拖鞋前往大廳或餐廳，感謝您的配合。"},
+
+  {keywords:["電話","外線","內線"], answer:"客房電話可直接撥打市內、市外及國際電話。若撥打其他客房，請直接輸入房號（例如：701房間請輸入701）。撥打市內或長途電話時，請先按「D」鍵確認撥號音後再輸入電話號碼。撥打國際電話時，請按「D」鍵後依序輸入010＋國碼＋區碼＋電話號碼。"}
   ],
   'zh-HK': [
-    {
-    "keywords": ["入住", "登記", "時間", "幾點", "入住時間"],
-    "answer": "入住時間由下午3:00開始。視房況可提供付費提前入住服務，請到2樓前台辦理。"
-  },
-  {
-    "keywords": ["退房", "離開", "退房時間"],
-    "answer": "退房時間為上午10:00之前。視房況可提供付費延遲退房服務，請提前告知2樓前台。"
-  }
+  {keywords:["入住","check-in"], answer:"入住時間為下午3:00開始。"},
+
+  {keywords:["退房","延長","超時"], answer:"退房時間為上午10:00。如需延長退房時間，請預先按「A」鍵聯絡前台查詢，可能需支付額外費用。"},
+
+  {keywords:["早餐"], answer:"早餐供應時間為上午6:30至9:00。請前往1樓餐廳用餐。"},
+
+  {keywords:["叫醒服務","morning call"], answer:"請拿起電話聽筒，按下「B」鍵後輸入4位數時間。（例如：如需8:15叫醒，請輸入0815。）"},
+
+  {keywords:["貴重物品"], answer:"貴重物品請寄存於前台保險箱並領取收據。未寄存在前台的貴重物品，如有遺失或損壞，本酒店恕不負責，敬請見諒。"},
+
+  {keywords:["空調","冷氣","暖氣"], answer:"空調可透過床頭旁的控制開關調節。"},
+
+  {keywords:["前台","聯絡前台"], answer:"如需聯絡前台，請按「A」鍵。"},
+
+  {keywords:["房卡","鑰匙"], answer:"外出時請確認房門已上鎖，並請將房間鑰匙寄存於前台。"},
+
+  {keywords:["逃生","避難","火警"], answer:"房門內側貼有緊急逃生路線圖。為保障您的安全，請務必事先查看。"},
+
+  {keywords:["通風","浴室"], answer:"浴室內的抽氣扇24小時運作，以保持空氣流通。"},
+
+  {keywords:["洗衣","洗衣服務","laundry"], answer:"如對洗衣服務有遺失、損壞或任何不滿意之處，請於送回後24小時內通知前台。若需賠償，最高賠償金額為洗衣費用的10倍。洗衣服務於2樓前台受理。如需查詢，請按「A」鍵聯絡前台。※星期日及公眾假期暫停服務。"},
+
+  {keywords:["房間清潔","清潔","打掃"], answer:"房間清潔申請時間為上午10:00至下午1:00。如不需要清潔或需更改時間，請按「A」鍵聯絡前台。未飲完的飲料及垃圾桶內的垃圾將會被清理。（如有不可丟棄的物品，請留下備註說明。）"},
+
+  {keywords:["茶","熱水"], answer:"請使用客房內提供的茶具或電熱水壺。"},
+
+  {keywords:["風筒","吹風機"], answer:"風筒放置於衣櫃內。"},
+
+  {keywords:["雪櫃","冰箱"], answer:"雪櫃位於書桌下方。（不設冷凍功能。）"},
+
+  {keywords:["自動販賣機"], answer:"館內5樓及9樓設有自動販賣機。"},
+
+  {keywords:["自助洗衣","投幣洗衣機"], answer:"9樓自動販賣機區旁設有投幣式洗衣設備。"},
+
+  {keywords:["微波爐"], answer:"9樓自動販賣機區旁設有微波爐。"},
+
+  {keywords:["製冰機","冰塊"], answer:"5樓自動販賣機區旁設有製冰機。"},
+
+  {keywords:["熨褲機"], answer:"各樓層升降機旁設有熨褲機。（前台亦提供借用。）"},
+
+  {keywords:["wifi","無線網絡","網絡","internet"], answer:"所有客房均提供免費Wi-Fi。如需有線網絡，請於2樓大堂使用。"},
+
+  {keywords:["報紙"], answer:"2樓大堂提供報紙閱覽及購買。"},
+
+  {keywords:["按摩","交通資訊","時間表"], answer:"如需按摩服務、交通資訊或列車時間表，請按「A」鍵聯絡前台。"},
+
+  {keywords:["影印","傳真"], answer:"影印及傳真服務可於2樓前台付費使用。如需使用，請向前台查詢。"},
+
+  {keywords:["借用","租借"], answer:"可借用物品包括：檯燈、手機充電器、熨斗、燙衣板、衣架、毛毯、有線LAN網絡線、針線包、熨褲機、指甲鉗、體溫計、開瓶器、紅酒開瓶器、叉子、匙羹、餐碟及加濕器。"},
+
+  {keywords:["盥洗用品","備品","amenities"], answer:"前台提供以下備品：梳、剃鬚刀、髮刷、棉花棒、香皂、沐浴海綿、基本護膚品、即棄筷子、入浴劑、高崎站出發列車時間表以及附近餐廳地圖。"},
+
+  {keywords:["客房服務","room service"], answer:"本酒店不提供客房送餐服務。"},
+
+  {keywords:["睡衣","拖鞋"], answer:"請勿穿著睡衣或拖鞋前往大堂或餐廳，感謝您的配合。"},
+
+  {keywords:["電話","外線","內線"], answer:"客房電話可直接撥打市內、市外及國際電話。若致電其他客房，請直接輸入房號（例如：701房間請輸入701）。撥打市內或長途電話時，請先按「D」鍵確認撥號音後再輸入電話號碼。撥打國際電話時，請按「D」鍵後依序輸入010＋國家代碼＋地區代碼＋電話號碼。"}
   ],
   vi: [
-    {
-"keywords": ["trả phòng", "nhận phòng", "thời gian", "mấy giờ", "thời gian đến"],
-"answer": "Nhận phòng bắt đầu từ 3:00 PM. Nhận phòng sớm có sẵn với phí tùy theo tình trạng phòng trống. Vui lòng đến quầy lễ tân ở tầng 2."
-},
-{
-"keywords": ["trả phòng", "trả phòng", "ra ngoài", "quá hạn lưu trú"],
-"answer": "Trả phòng được yêu cầu trước 10:00 AM. Gia hạn lưu trú có thể với phí tùy theo tình trạng phòng trống. Vui lòng thông báo cho quầy lễ tân ở tầng 2."
-}
+    {keywords:["nhận phòng","check-in"], answer:"Thời gian nhận phòng bắt đầu từ 15:00."},
+
+  {keywords:["trả phòng","gia hạn","phụ phí"], answer:"Thời gian trả phòng là 10:00 sáng. Nếu quý khách muốn gia hạn thời gian trả phòng, vui lòng liên hệ quầy lễ tân trước bằng cách nhấn nút 'A'. Có thể phát sinh phụ phí."},
+
+  {keywords:["bữa sáng","ăn sáng"], answer:"Bữa sáng được phục vụ từ 6:30 đến 9:00 sáng. Vui lòng đến nhà hàng ở tầng 1."},
+
+  {keywords:["báo thức","đánh thức"], answer:"Vui lòng nhấc ống nghe điện thoại, nhấn nút 'B' và nhập 4 chữ số thời gian. (Ví dụ: nếu muốn báo thức lúc 8:15, hãy nhập 0815.)"},
+
+  {keywords:["đồ có giá trị","tài sản"], answer:"Vui lòng gửi các đồ vật có giá trị vào két an toàn tại quầy lễ tân và nhận phiếu gửi. Khách sạn không chịu trách nhiệm đối với các sự cố xảy ra với đồ vật không gửi tại quầy lễ tân."},
+
+  {keywords:["điều hòa","máy lạnh","sưởi"], answer:"Quý khách có thể điều chỉnh điều hòa bằng công tắc đặt cạnh đầu giường."},
+
+  {keywords:["lễ tân","gọi lễ tân"], answer:"Để liên hệ quầy lễ tân, vui lòng nhấn nút 'A'."},
+
+  {keywords:["chìa khóa phòng","thẻ phòng"], answer:"Khi ra ngoài, vui lòng đảm bảo cửa phòng đã được khóa. Xin vui lòng gửi chìa khóa phòng tại quầy lễ tân."},
+
+  {keywords:["thoát hiểm","hỏa hoạn","sơ tán"], answer:"Sơ đồ lối thoát hiểm được dán ở mặt trong cửa phòng. Vui lòng kiểm tra trước để đảm bảo an toàn."},
+
+  {keywords:["thông gió","phòng tắm"], answer:"Quạt thông gió trong phòng tắm hoạt động 24 giờ để đảm bảo lưu thông không khí."},
+
+  {keywords:["giặt là","giặt đồ","laundry"], answer:"Nếu có mất mát, hư hỏng hoặc không hài lòng với dịch vụ giặt là, vui lòng thông báo trong vòng 24 giờ sau khi nhận lại đồ. Trong trường hợp bồi thường, mức bồi thường tối đa là gấp 10 lần phí giặt. Dịch vụ giặt là được tiếp nhận tại quầy lễ tân tầng 2. Để liên hệ, vui lòng nhấn nút 'A'. *Lưu ý: dịch vụ này không hoạt động vào Chủ Nhật và ngày lễ."},
+
+  {keywords:["dọn phòng","vệ sinh phòng","lau phòng"], answer:"Yêu cầu dọn phòng được tiếp nhận từ 10:00 sáng đến 1:00 chiều. Nếu không cần dọn phòng hoặc muốn thay đổi thời gian, vui lòng nhấn 'A' để liên hệ quầy lễ tân. Đồ uống còn lại và rác trong thùng rác sẽ được dọn bỏ. (Nếu có vật không được vứt bỏ, vui lòng để lại ghi chú.)"},
+
+  {keywords:["trà","nước nóng"], answer:"Vui lòng sử dụng bộ pha trà hoặc ấm đun nước điện được trang bị trong phòng."},
+
+  {keywords:["máy sấy tóc"], answer:"Máy sấy tóc được đặt trong tủ quần áo."},
+
+  {keywords:["tủ lạnh"], answer:"Tủ lạnh nằm dưới bàn làm việc. (Không có chức năng đông lạnh.)"},
+
+  {keywords:["máy bán hàng tự động"], answer:"Máy bán hàng tự động được đặt tại tầng 5 và tầng 9."},
+
+  {keywords:["giặt xu","máy giặt tự động"], answer:"Máy giặt tự phục vụ bằng xu được đặt cạnh khu vực máy bán hàng tự động tại tầng 9."},
+
+  {keywords:["lò vi sóng"], answer:"Lò vi sóng được đặt cạnh khu vực máy bán hàng tự động tại tầng 9."},
+
+  {keywords:["máy làm đá","đá"], answer:"Máy làm đá được đặt cạnh khu vực máy bán hàng tự động tại tầng 5."},
+
+  {keywords:["bàn ép quần"], answer:"Bàn ép quần được đặt cạnh thang máy ở mỗi tầng. (Quầy lễ tân cũng có cho mượn.)"},
+
+  {keywords:["wifi","internet","mạng"], answer:"Wi-Fi miễn phí được cung cấp trong tất cả các phòng. Nếu cần kết nối mạng LAN có dây, vui lòng sử dụng tại sảnh tầng 2."},
+
+  {keywords:["báo"], answer:"Báo có sẵn để đọc hoặc mua tại sảnh tầng 2."},
+
+  {keywords:["massage","thông tin giao thông","lịch tàu"], answer:"Để đặt dịch vụ massage, hỏi thông tin giao thông hoặc lịch tàu, vui lòng nhấn 'A' để liên hệ quầy lễ tân."},
+
+  {keywords:["sao chép","fax","photocopy"], answer:"Dịch vụ photocopy và fax có sẵn tại quầy lễ tân tầng 2 với một khoản phí. Vui lòng liên hệ nhân viên nếu quý khách cần sử dụng."},
+
+  {keywords:["cho mượn"], answer:"Các vật dụng cho mượn gồm có: đèn bàn, bộ sạc điện thoại, bàn ủi, bàn ủi quần áo, móc treo quần áo, chăn, cáp LAN có dây, bộ kim chỉ, bàn ép quần, bấm móng tay, nhiệt kế, đồ mở nắp chai, đồ mở rượu vang, nĩa, muỗng, đĩa và máy tạo độ ẩm."},
+
+  {keywords:["đồ dùng","tiện nghi","amenities"], answer:"Các tiện nghi có sẵn gồm: lược, dao cạo râu, bàn chải tóc, tăm bông, xà phòng, bọt biển tắm, sản phẩm chăm sóc da cơ bản, đũa dùng một lần, muối tắm, bảng giờ tàu xuất phát từ ga Takasaki và bản đồ nhà hàng gần khách sạn."},
+
+  {keywords:["dịch vụ phòng","room service"], answer:"Khách sạn không cung cấp dịch vụ ăn uống tại phòng."},
+
+  {keywords:["đồ ngủ","dép"], answer:"Xin vui lòng không mặc đồ ngủ hoặc đi dép khi di chuyển trong khu vực sảnh hoặc nhà hàng."},
+
+  {keywords:["điện thoại","gọi ngoài","gọi nội bộ"], answer:"Điện thoại trong phòng có thể gọi trực tiếp nội hạt, liên tỉnh và quốc tế. Để gọi phòng khác, vui lòng nhập số phòng (ví dụ: gọi phòng 701 thì bấm 701). Khi gọi nội hạt hoặc liên tỉnh, nhấn nút 'D', chờ tín hiệu quay số rồi nhập số điện thoại. Khi gọi quốc tế, nhấn 'D', sau đó nhập 010 + mã quốc gia + mã vùng + số điện thoại."}
+
   ],
   th: [
-    {
-"keywords": ["เช็คเอาท์", "เช็คอิน", "เวลา", "กี่โมง", "เวลาถึง"],
-"answer": "การเช็คอินเริ่มต้นเวลา 15:00 น. การเช็คอインก่อนเวลามีให้บริการโดยมีค่าธรรมเนียมขึ้นอยู่กับความพร้อมของห้องพัก กรุณามาที่แผนกต้อนรับชั้น 2"
-},
-{
-"keywords": ["เช็คเอาท์", "เช็คเอาท์", "ออก", "เกินกำหนด"],
-"answer": "ขอเช็คเอาท์ก่อน 10:00 น. สามารถขยายเวลาพักได้โดยมีค่าธรรมเนียมขึ้นอยู่กับความพร้อมของห้องพัก กรุณาแจ้งแผนกต้อนรับชั้น 2"
-}
+    {keywords:["เช็คอิน","check-in"], answer:"สามารถเช็คอินได้ตั้งแต่เวลา 15:00 น."},
+
+  {keywords:["เช็คเอาท์","ขยายเวลา","ค่าบริการเพิ่ม"], answer:"เวลาเช็คเอาท์คือ 10:00 น. หากต้องการขยายเวลาเช็คเอาท์ กรุณาติดต่อแผนกต้อนรับล่วงหน้าโดยกดปุ่ม 'A' อาจมีค่าบริการเพิ่มเติม."},
+
+  {keywords:["อาหารเช้า"], answer:"ให้บริการอาหารเช้าตั้งแต่เวลา 6:30 น. ถึง 9:00 น. กรุณาไปที่ห้องอาหารชั้น 1."},
+
+  {keywords:["ปลุก","มอร์นิ่งคอล"], answer:"กรุณายกหูโทรศัพท์ กดปุ่ม 'B' แล้วใส่ตัวเลข 4 หลักของเวลา (ตัวอย่าง: หากต้องการปลุกเวลา 8:15 ให้กด 0815)"},
+
+  {keywords:["ของมีค่า"], answer:"กรุณาฝากของมีค่าไว้ในตู้เซฟที่แผนกต้อนรับและรับใบรับฝากไว้ ทางโรงแรมไม่สามารถรับผิดชอบต่อความเสียหายหรือการสูญหายของทรัพย์สินที่ไม่ได้ฝากไว้กับแผนกต้อนรับ."},
+
+  {keywords:["แอร์","เครื่องปรับอากาศ","ความเย็น","ความร้อน"], answer:"สามารถปรับเครื่องปรับอากาศได้ที่สวิตช์ควบคุมบริเวณหัวเตียง."},
+
+  {keywords:["แผนกต้อนรับ","ติดต่อฟรอนต์"], answer:"หากต้องการติดต่อแผนกต้อนรับ กรุณากดปุ่ม 'A'."},
+
+  {keywords:["กุญแจห้อง","คีย์การ์ด"], answer:"เมื่อออกจากห้อง กรุณาตรวจสอบให้แน่ใจว่าประตูล็อกเรียบร้อย และกรุณาฝากกุญแจห้องไว้ที่แผนกต้อนรับ."},
+
+  {keywords:["ทางหนีไฟ","อพยพ","ไฟไหม้"], answer:"แผนผังเส้นทางหนีไฟติดอยู่ด้านในของประตูห้อง กรุณาตรวจสอบล่วงหน้าเพื่อความปลอดภัย."},
+
+  {keywords:["ระบายอากาศ","ห้องน้ำ"], answer:"พัดลมระบายอากาศในห้องน้ำทำงานตลอด 24 ชั่วโมงเพื่อให้มีการถ่ายเทอากาศ."},
+
+  {keywords:["ซักรีด","ซักผ้า","laundry"], answer:"หากมีการสูญหาย ความเสียหาย หรือไม่พึงพอใจเกี่ยวกับบริการซักรีด กรุณาแจ้งภายใน 24 ชั่วโมงหลังจากได้รับผ้าแล้ว ในกรณีชดเชย ความรับผิดชอบจะจำกัดไม่เกิน 10 เท่าของค่าซักรีด สามารถติดต่อบริการซักรีดได้ที่แผนกต้อนรับชั้น 2 หากต้องการสอบถาม กรุณากด 'A' หมายเหตุ: งดให้บริการในวันอาทิตย์และวันหยุดนักขัตฤกษ์."},
+
+  {keywords:["ทำความสะอาดห้อง","ทำความสะอาด","แม่บ้าน"], answer:"สามารถขอทำความสะอาดห้องได้ตั้งแต่เวลา 10:00 น. ถึง 13:00 น. หากไม่ต้องการทำความสะอาดหรือประสงค์จะเปลี่ยนเวลา กรุณากด 'A' เพื่อติดต่อแผนกต้อนรับ เครื่องดื่มที่เหลือและขยะในถังขยะจะถูกนำไปทิ้ง (หากมีสิ่งของที่ไม่ควรถูกทิ้ง กรุณาเขียนบันทึกแจ้งไว้)."},
+
+  {keywords:["ชา","น้ำร้อน"], answer:"กรุณาใช้ชุดชงชาหรือกาต้มน้ำไฟฟ้าที่มีอยู่ในห้องพัก."},
+
+  {keywords:["ไดร์เป่าผม"], answer:"ไดร์เป่าผมอยู่ในตู้เสื้อผ้า."},
+
+  {keywords:["ตู้เย็น"], answer:"ตู้เย็นอยู่ใต้โต๊ะทำงาน (ไม่สามารถแช่แข็งได้)."},
+
+  {keywords:["ตู้จำหน่ายสินค้าอัตโนมัติ"], answer:"มีตู้จำหน่ายสินค้าอัตโนมัติที่ชั้น 5 และชั้น 9."},
+
+  {keywords:["เครื่องซักผ้าหยอดเหรียญ"], answer:"มีเครื่องซักผ้าหยอดเหรียญอยู่บริเวณเดียวกับตู้จำหน่ายสินค้าอัตโนมัติที่ชั้น 9."},
+
+  {keywords:["ไมโครเวฟ"], answer:"มีไมโครเวฟอยู่บริเวณเดียวกับตู้จำหน่ายสินค้าอัตโนมัติที่ชั้น 9."},
+
+  {keywords:["เครื่องทำน้ำแข็ง","น้ำแข็ง"], answer:"มีเครื่องทำน้ำแข็งอยู่บริเวณเดียวกับตู้จำหน่ายสินค้าอัตโนมัติที่ชั้น 5."},
+
+  {keywords:["เครื่องรีดกางเกง"], answer:"มีเครื่องรีดกางเกงอยู่ข้างลิฟต์ทุกชั้น (สามารถยืมได้ที่แผนกต้อนรับเช่นกัน)."},
+
+  {keywords:["wifi","อินเทอร์เน็ต","LAN"], answer:"ห้องพักทุกห้องมีบริการ Wi-Fi ฟรี หากต้องการใช้อินเทอร์เน็ตแบบสาย LAN สามารถใช้ได้ที่ล็อบบี้ชั้น 2."},
+
+  {keywords:["หนังสือพิมพ์"], answer:"มีหนังสือพิมพ์ให้อ่านและจำหน่ายที่ล็อบบี้ชั้น 2."},
+
+  {keywords:["นวด","ข้อมูลการเดินทาง","ตารางเวลา"], answer:"หากต้องการบริการนวด ข้อมูลการเดินทาง หรือสอบถามตารางรถไฟ กรุณากด 'A' เพื่อติดต่อแผนกต้อนรับ."},
+
+  {keywords:["ถ่ายเอกสาร","แฟกซ์"], answer:"บริการถ่ายเอกสารและแฟกซ์มีให้บริการที่แผนกต้อนรับชั้น 2 โดยมีค่าบริการ กรุณาแจ้งเจ้าหน้าที่หากต้องการใช้บริการ."},
+
+  {keywords:["ยืมอุปกรณ์"], answer:"อุปกรณ์ที่สามารถยืมได้ ได้แก่ โคมไฟตั้งโต๊ะ ที่ชาร์จโทรศัพท์ เตารีด ที่รองรีด ไม้แขวนเสื้อ ผ้าห่ม สาย LAN ชุดเย็บผ้า เครื่องรีดกางเกง ที่ตัดเล็บ เทอร์โมมิเตอร์ ที่เปิดขวด ที่เปิดไวน์ ส้อม ช้อน จาน และเครื่องเพิ่มความชื้น."},
+
+  {keywords:["ของใช้","สิ่งอำนวยความสะดวก","amenities"], answer:"ของใช้ที่มีให้ ได้แก่ หวี มีดโกน แปรงผม คอตตอนบัด สบู่ ฟองน้ำอาบน้ำ ผลิตภัณฑ์บำรุงผิวพื้นฐาน ตะเกียบใช้ครั้งเดียว เกลืออาบน้ำ ตารางรถไฟจากสถานีทาคาซากิ และแผนที่ร้านอาหารใกล้เคียง."},
+
+  {keywords:["รูมเซอร์วิส"], answer:"โรงแรมไม่มีบริการรูมเซอร์วิส."},
+
+  {keywords:["ชุดนอน","รองเท้าแตะ"], answer:"กรุณาอย่าสวมชุดนอนหรือรองเท้าแตะเมื่อเดินในบริเวณล็อบบี้หรือห้องอาหาร."},
+
+  {keywords:["โทรศัพท์","สายภายนอก","สายภายใน"], answer:"โทรศัพท์ในห้องสามารถโทรออกภายในเมือง ต่างจังหวัด และต่างประเทศได้โดยตรง หากต้องการโทรไปยังห้องอื่น กรุณากดหมายเลขห้อง (เช่น โทรไปห้อง 701 ให้กด 701) สำหรับการโทรภายในประเทศ ให้กดปุ่ม 'D' รอฟังสัญญาณแล้วกดหมายเลขปลายทาง สำหรับการโทรระหว่างประเทศ ให้กด 'D' แล้วกด 010 + รหัสประเทศ + รหัสพื้นที่ + หมายเลขโทรศัพท์."}
   ]
 };
 function findAnswer(query){
